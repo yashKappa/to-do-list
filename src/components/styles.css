@@ -1,0 +1,101 @@
+.sidebar {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    width: 250px;
+    min-width: 200px;
+}
+
+.nav-link.active {
+    background-color: #575757 !important;
+    color: rgb(255, 255, 255) !important;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    background-color: #2b2b2b;
+    color: rgb(255, 255, 255) !important;
+    border-radius: 5px;
+}
+
+@media (max-width: 991px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: 1000vh;
+    }
+
+    .nav {
+        flex-direction: row !important;
+        justify-content: space-around;
+        position: absolute;
+    }
+
+    .navbar {
+        background-color: rgb(46, 46, 46);
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-link.active {
+        border-radius: 0;
+        padding: 5px 10px;
+        border-radius: 0.3rem;
+    }
+
+    .navbar-toggler {
+        border: none !important;
+        outline: none !important;
+        margin-left: 1rem;
+    }
+
+    i {
+        color: #ffffff;
+        font-size: x-large;
+    }
+}
+
+.Add{
+    padding: 5px 10px;
+    background-color: rgb(32, 32, 32);
+    border: 3px Double rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    color: white;
+}
+
+.Add:hover{
+    background-color: rgb(7, 7, 7);
+}
+
+.card-body{
+    background-color: #2e2e2e;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 10px gray;
+}
+
+.title, small, p{
+    color: white;
+}
+
+
+.input textarea, .input input{
+    background-color: #2e2e2e;
+    color: white;
+    font-weight: 500;
+}
+
+.input textarea:focus,
+.input input:focus{
+    background-color: #2e2e2e;
+    color: white;
+    font-weight: 500;
+}
+
+
+.input textarea::placeholder, 
+.input input::placeholder{
+    color: rgb(255, 255, 255);
+}
