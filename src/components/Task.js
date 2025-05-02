@@ -15,7 +15,7 @@ function Task({ tasks, onComplete, onEdit, onDelete }) {
             <h5>All Tasks</h5>
             {tasks.length === 0 ? (
                 <div className="d-flex justify-content-center align-items-center flex-column" style={{ height: '80vh' }}>
-                <img style={{ width: '30%' }} alt="task img" src="task.jpg" />
+                <img style={{ width: '30%' }} alt="task img" src={`${process.env.PUBLIC_URL}/task.jpg`} />
                 <p className="text-muted mt-3">You haven’t added any tasks yet</p>
               </div>              
             ) : (

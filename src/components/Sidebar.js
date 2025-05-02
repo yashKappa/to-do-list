@@ -34,7 +34,7 @@ function Sidebar() {
             <div className="sidebar bg-dark text-white p-3 d-none d-lg-block" style={{ width: '250px' }}>
   <h4 className="text-center">Task Manager</h4>
   <img 
-    src="logo 1.png" 
+    src={`${process.env.PUBLIC_URL}/logo 1.png`} 
     className="img-fluid rounded my-3"
     alt="Sidebar logo"
     style={{ maxHeight: '150px', objectFit: 'cover' }} 
