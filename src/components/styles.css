@@ -76,8 +76,16 @@
     box-shadow: 0px 0px 10px gray;
 }
 
-.title, small, p{
+small, p{
     color: white;
+}
+
+h6{
+    background-color: #ffffff;
+    width: fit-content;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 0.4rem;
 }
 
 

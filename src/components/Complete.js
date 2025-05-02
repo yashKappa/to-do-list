@@ -13,9 +13,9 @@ function Complete({ completedTasks, onDelete }) {
         completedTasks.map(task => (
           <div key={task.id} className="card mb-2">
             <div className="card-body">
+            <small className="float-end">{task.date}</small>
               <h6 className='title'>
                 {task.title}{' '}
-                <small className="float-end">{task.date}</small>
               </h6>
               <p style={{ whiteSpace: 'pre-line' }}>{task.note}</p>
               <button className="btn btn-danger btn-sm" onClick={() => onDelete(task.id, 'complete')}>

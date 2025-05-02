@@ -35,9 +35,9 @@ function Task({ tasks, onComplete, onEdit, onDelete }) {
                                 </>
                             ) : (
                                 <>
+                                    <small className="float-end">{task.date}</small>
                                     <h6 className='title'>
                                         {task.title}{' '}
-                                        <small className="float-end">{task.date}</small>
                                     </h6>
                                     <p style={{ whiteSpace: 'pre-line' }}>{task.note}</p>
                                     <button
