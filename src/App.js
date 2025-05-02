@@ -19,13 +19,13 @@ function App() {
     setTasks([newTask, ...tasks]);
   };
 
-  const handleComplete = (id) => {
-    const task = tasks.find(t => t.id === id);
-    if (task) {
-      setCompletedTasks([task, ...completedTasks]);
-      setTasks(tasks.filter(t => t.id !== id));
-    }
-  };
+  // const handleComplete = (id) => {
+  //   const task = tasks.find(t => t.id === id);
+  //   if (task) {
+  //     setCompletedTasks([task, ...completedTasks]);
+  //     setTasks(tasks.filter(t => t.id !== id));
+  //   }
+  // };
 
   const handleEdit = (id, updatedTitle, updatedNote) => {
     setTasks(tasks.map(task =>
@@ -41,13 +41,25 @@ function App() {
     }
   };
 
+  const onComplete = (id) => {
+    const now = new Date().toLocaleString();
+    const task = tasks.find(t => t.id === id);
+    const completedTask = {
+      ...task,
+      completedAt: now,
+    };
+    setTasks(tasks.filter(t => t.id !== id));
+    setCompletedTasks([completedTask, ...completedTasks]); // ✅ Adds to the top
+  };
+  
+
   return (
     <div className="d-flex flex-column flex-lg-row">
       <Sidebar />
       <div className="container-fluid p-4" style={{ flex: 1 }}>
         <Routes>
-          <Route path="/task" element={<Task tasks={tasks} onComplete={handleComplete} onEdit={handleEdit} onDelete={(id) => { setTasks(tasks.filter(t => t.id !== id)); }} />} />
-          <Route path="/complete" element={<Complete completedTasks={completedTasks} onDelete={handleDelete} />} />
+        <Route path="/task" element={<Task tasks={tasks} onComplete={onComplete} onEdit={handleEdit} onDelete={(id) => { setTasks(tasks.filter(t => t.id !== id)); }} />} />
+        <Route path="/complete" element={<Complete completedTasks={completedTasks} onDelete={handleDelete} />} />
           <Route path="/" element={<Input onAdd={handleAddTask} />} />
         </Routes>
       </div>

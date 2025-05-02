@@ -58,6 +58,18 @@
     }
 }
 
+@media (max-width: 500px){
+    .border{
+        margin-top: 10px;
+    }
+
+    .bor{
+        width: 100%;
+        text-align: end;
+    }
+} 
+
+
 .Add {
     padding: 5px 10px;
     background-color: rgb(32, 32, 32);
@@ -79,6 +91,17 @@
 small,
 p {
     color: white;
+}
+
+.bor{
+    text-align: end;
+    float: inline-end;  
+}
+
+.border{
+    border-radius: 0.3rem;
+    padding: 3px 10px;
+    text-align: left;
 }
 
 h6 {

@@ -10,9 +10,11 @@ function Task({ tasks, onComplete, onEdit, onDelete }) {
         setEditId(null);
     };
 
+
     return (
         <div>
             <h5>All Tasks</h5>
+            <hr />
             {tasks.length === 0 ? (
                 <div className="d-flex justify-content-center align-items-center flex-column" style={{ height: '80vh' }}>
                     <img style={{ width: '30%' }} alt="task img" src={`${process.env.PUBLIC_URL}/task.jpg`} />
@@ -35,9 +37,7 @@ function Task({ tasks, onComplete, onEdit, onDelete }) {
                                 </>
                             ) : (
                                 <>
-                                    <div className='d-flex justify-content-end'>
-                                        <small className="float-end">{task.date}</small>
-                                    </div>
+
                                     <div>
                                         <h6 className='title'>
                                             {task.title}{' '}
@@ -54,6 +54,11 @@ function Task({ tasks, onComplete, onEdit, onDelete }) {
                                         <button className="btn btn-danger btn-sm" onClick={() => onDelete(task.id)}>
                                             Delete
                                         </button>
+                                        <div className="d-flex justify-content-end flex-column bor">
+                                            <div className='border'>
+                                                <small>Created at: {task.date}</small><br />
+                                            </div>
+                                        </div>
                                     </div>
                                 </>
                             )}

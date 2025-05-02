@@ -33,6 +33,7 @@ function Input({ onAdd }) {
     return (
         <div className='input'>
             <h4>Add Task</h4>
+            <hr />
             <input
                 type="text"
                 className={`form-control mb-1 ${titleError ? 'is-invalid' : ''}`}
