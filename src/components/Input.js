@@ -32,13 +32,13 @@ function Input({ onAdd }) {
 
     return (
         <div className='input'>
-            <h4>Add Task</h4>
+            <h4>📝 Add Task</h4>
             <hr />
             <input
                 type="text"
                 className={`form-control mb-1 ${titleError ? 'is-invalid' : ''}`}
                 style={{ boxShadow: 'none', outline: 'none' }}
-                placeholder="Title"
+                placeholder="🎯 Title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
             />
@@ -47,7 +47,7 @@ function Input({ onAdd }) {
             <textarea
                 className={`form-control mb-1 ${noteError ? 'is-invalid' : ''}`}
                 style={{ height: '300px', resize: 'none', boxShadow: 'none', outline: 'none' }}
-                placeholder="Note"
+                placeholder="📝 Note"
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
             />
@@ -60,7 +60,7 @@ function Input({ onAdd }) {
                     style={{ width: '200px', fontWeight: 'bolder' }}
                     onClick={handleSubmit}
                 >
-                    Add Task
+                  📋 Add Task
                 </button>
             </div>
         </div>
