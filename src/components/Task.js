@@ -35,8 +35,11 @@ function Task({ tasks, onComplete, onEdit, onDelete }) {
                                 </>
                             ) : (
                                 <>
-                                    <small className="float-end">{task.date}</small>
-                                    <h6 className='title'>
+                                <div className='d-flex justify-content-end'>
+                                <small className="float-end">{task.date}</small>
+                                </div>
+                                   <div>
+                                   <h6 className='title'>
                                         {task.title}{' '}
                                     </h6>
                                     <p style={{ whiteSpace: 'pre-line' }}>{task.note}</p>
@@ -51,6 +54,7 @@ function Task({ tasks, onComplete, onEdit, onDelete }) {
                                     <button className="btn btn-danger btn-sm" onClick={() => onDelete(task.id)}>
                                         Delete
                                     </button>
+                                   </div>
                                 </>
                             )}
                         </div>
