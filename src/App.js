@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Task from './components/Task';
 import Complete from './components/Complete';
@@ -42,18 +42,16 @@ function App() {
   };
   
   return (
-    <Router>
-<div className="d-flex flex-column flex-lg-row">
-<Sidebar />
-        <div className="container-fluid p-4" style={{ flex: 1 }}>
-          <Routes>
-            <Route path="/task" element={<Task tasks={tasks} onComplete={handleComplete} onEdit={handleEdit}  onDelete={(id) => {setTasks(tasks.filter(t => t.id !== id));}} />} />
-            <Route path="/complete" element={<Complete completedTasks={completedTasks} onDelete={handleDelete} />} />
-            <Route path="/" element={<Input onAdd={handleAddTask} />} />
-          </Routes>
-        </div>
+    <div className="d-flex flex-column flex-lg-row">
+      <Sidebar />
+      <div className="container-fluid p-4" style={{ flex: 1 }}>
+        <Routes>
+          <Route path="/task" element={<Task tasks={tasks} onComplete={handleComplete} onEdit={handleEdit} onDelete={(id) => { setTasks(tasks.filter(t => t.id !== id)); }} />} />
+          <Route path="/complete" element={<Complete completedTasks={completedTasks} onDelete={handleDelete} />} />
+          <Route path="/" element={<Input onAdd={handleAddTask} />} />
+        </Routes>
       </div>
-    </Router>
+    </div>
   );
 }
 
