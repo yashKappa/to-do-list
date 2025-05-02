@@ -11,7 +11,7 @@ function Input({ onAdd }) {
     const handleSubmit = () => {
         const trimmedTitle = title.trim();
         const trimmedNote = note.trim();
-        
+
         setTitleError(!trimmedTitle);
         setNoteError(!trimmedNote);
 
@@ -34,23 +34,23 @@ function Input({ onAdd }) {
         <div className='input'>
             <h4>Add Task</h4>
             <input
-  type="text"
-  className={`form-control mb-1 ${titleError ? 'is-invalid' : ''}`}
-  style={{  boxShadow: 'none', outline: 'none' }}
-  placeholder="Title"
-  value={title}
-  onChange={(e) => setTitle(e.target.value)}
-/>
-{titleError && <div className="text-danger mb-2">Fill this Input box</div>}
+                type="text"
+                className={`form-control mb-1 ${titleError ? 'is-invalid' : ''}`}
+                style={{ boxShadow: 'none', outline: 'none' }}
+                placeholder="Title"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+            />
+            {titleError && <div className="text-danger mb-2">Fill this Input box</div>}
 
-<textarea
-  className={`form-control mb-1 ${noteError ? 'is-invalid' : ''}`}
-  style={{ height: '300px', resize: 'none', boxShadow: 'none', outline: 'none' }}
-  placeholder="Note"
-  value={note}
-  onChange={(e) => setNote(e.target.value)}
-/>
-{noteError && <div className="text-danger mb-2">Fill this Input box</div>}
+            <textarea
+                className={`form-control mb-1 ${noteError ? 'is-invalid' : ''}`}
+                style={{ height: '300px', resize: 'none', boxShadow: 'none', outline: 'none' }}
+                placeholder="Note"
+                value={note}
+                onChange={(e) => setNote(e.target.value)}
+            />
+            {noteError && <div className="text-danger mb-2">Fill this Input box</div>}
 
 
             <div className='d-flex justify-content-center'>

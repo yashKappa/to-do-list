@@ -32,31 +32,31 @@ function Sidebar() {
         <div>
             {/* Sidebar for larger screens */}
             <div className="sidebar bg-dark text-white p-3 d-none d-lg-block" style={{ width: '250px' }}>
-  <h4 className="text-center">Task Manager</h4>
-  <img 
-    src={`${process.env.PUBLIC_URL}/logo 1.png`} 
-    className="img-fluid rounded my-3"
-    alt="Sidebar logo"
-    style={{ maxHeight: '150px', objectFit: 'cover' }} 
-  />
-  <ul className="nav flex-column mt-4">
-    <li className="nav-item mb-2">
-      <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : 'text-white'}`} end>
-        Add Task
-      </NavLink>
-    </li>
-    <li className="nav-item mb-2">
-      <NavLink to="/task" className={({ isActive }) => `nav-link ${isActive ? 'active' : 'text-white'}`}>
-        All Tasks
-      </NavLink>
-    </li>
-    <li className="nav-item">
-      <NavLink to="/complete" className={({ isActive }) => `nav-link ${isActive ? 'active' : 'text-white'}`}>
-        Completed Tasks
-      </NavLink>
-    </li>
-  </ul>
-</div>
+                <h4 className="text-center">Task Manager</h4>
+                <img
+                    src={`${process.env.PUBLIC_URL}/logo 1.png`}
+                    className="img-fluid rounded my-3"
+                    alt="Sidebar logo"
+                    style={{ maxHeight: '150px', objectFit: 'cover' }}
+                />
+                <ul className="nav flex-column mt-4">
+                    <li className="nav-item mb-2">
+                        <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : 'text-white'}`} end>
+                            Add Task
+                        </NavLink>
+                    </li>
+                    <li className="nav-item mb-2">
+                        <NavLink to="/task" className={({ isActive }) => `nav-link ${isActive ? 'active' : 'text-white'}`}>
+                            All Tasks
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="/complete" className={({ isActive }) => `nav-link ${isActive ? 'active' : 'text-white'}`}>
+                            Completed Tasks
+                        </NavLink>
+                    </li>
+                </ul>
+            </div>
 
             {/* Navbar for smaller screens */}
             <nav className="navbar navbar-expand-lg navbar-dark d-lg-none">
@@ -94,7 +94,7 @@ function Sidebar() {
                         <h2 className="text-white">Task Manager</h2>
                         <i className="btn btn-outline-light btn-sm" onClick={() => setIsOpen(false)} class="fa-solid fa-xmark"></i>
                     </div>
-                    <img alt='logo' className="img-fluid rounded my-3" src='logo 1.png'/>
+                    <img alt='logo' className="img-fluid rounded my-3" src='logo 1.png' />
                     <ul className="navbar-nav">
                         <li className="nav-item mb-2">
                             <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : 'text-white'}`} end onClick={() => setIsOpen(false)}>

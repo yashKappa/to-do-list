@@ -40,7 +40,7 @@ function App() {
       setCompletedTasks(completedTasks.filter(t => t.id !== id));
     }
   };
-  
+
   return (
     <div className="d-flex flex-column flex-lg-row">
       <Sidebar />

@@ -58,7 +58,7 @@
     }
 }
 
-.Add{
+.Add {
     padding: 5px 10px;
     background-color: rgb(32, 32, 32);
     border: 3px Double rgb(255, 255, 255);
@@ -66,21 +66,22 @@
     color: white;
 }
 
-.Add:hover{
+.Add:hover {
     background-color: rgb(7, 7, 7);
 }
 
-.card-body{
+.card-body {
     background-color: #2e2e2e;
     border-radius: 0.5rem;
     box-shadow: 0px 0px 10px gray;
 }
 
-small, p{
+small,
+p {
     color: white;
 }
 
-h6{
+h6 {
     background-color: #ffffff;
     width: fit-content;
     color: black;
@@ -89,21 +90,22 @@ h6{
 }
 
 
-.input textarea, .input input{
+.input textarea,
+.input input {
     background-color: #2e2e2e;
     color: white;
     font-weight: 500;
 }
 
 .input textarea:focus,
-.input input:focus{
+.input input:focus {
     background-color: #2e2e2e;
     color: white;
     font-weight: 500;
 }
 
 
-.input textarea::placeholder, 
-.input input::placeholder{
+.input textarea::placeholder,
+.input input::placeholder {
     color: rgb(255, 255, 255);
 }
