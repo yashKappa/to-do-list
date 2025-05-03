@@ -1,5 +1,5 @@
 
-# ✅ Task Management Web App
+# ✅ To-Do-List Web App
 
 This is a simple and responsive task management web application built with **React**. It allows users to:
 
@@ -15,7 +15,7 @@ This is a simple and responsive task management web application built with **Rea
 1. Click the green **Code** button on the GitHub repository and choose **Download ZIP**, or clone it using Git:
 
 ```bash
-git clone https://github.com/your-username/task-manager-app.git
+git clone https://yashkappa.github.io/to-do-list.git
 ```
 
 2. Open the folder in **Visual Studio Code** or your preferred editor.
@@ -64,8 +64,6 @@ This creates a production-ready version in the `build/` folder.
 
 You can now host it on any static site host like:
 
-- **Vercel**
-- **Netlify**
 - **GitHub Pages**
 - **Firebase Hosting**
 
@@ -82,7 +80,7 @@ npm install --save gh-pages
 2. Add the following to your `package.json`:
 
 ```json
-"homepage": "https://your-username.github.io/task-manager-app",
+"homepage": "https://yashkappa.github.io/to-do-list",
 "scripts": {
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build"
